@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Bash script that displays the visitor IP along with the HTTP status code from the Apache log file
+
+apache_log_file="apache-access.log"
+awk '{count[$1, $9]++} END {for (key in count) {split(key, arr, SUBSEP); print count[key], arr[1], arr[2]}}' "$apache_log_file" | sort -rn

@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-
-# Initialize a variable and asign it to 0
+#Displaying Best School 10 times using while loop
 count=0
 
-#Displaying Best School 10 times using while loop
-while [ $count -lt 10 ]
+while [ "$count" -lt 10 ]
 do
-	echo 'Best School'
+	echo "Best School"
 	((count++))
 done

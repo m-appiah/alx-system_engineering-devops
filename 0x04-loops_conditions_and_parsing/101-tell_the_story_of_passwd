@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Tell the story of passwd
+passwd_file="/etc/passwd"
+
+while IFS=: read -r username password userid groupname home_directory shell
+do
+    full_name=$(getent passwd "$username" | cut -d ':' -f 5)
+
+    echo "The user $username is part of the $groupname gang, lives in $home_directory, and rides $shell."
+    echo "$userid's place is protected by the passcode $password, more info about the user here: $full_name"
+    echo
+done < "$passwd_file"

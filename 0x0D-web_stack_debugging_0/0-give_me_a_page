@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# command(s) for fixing page error
+
+sudo service apache2 start

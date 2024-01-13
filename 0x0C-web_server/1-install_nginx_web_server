@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # nginx server installation
-sudo apt-get update -y
-sudo apt-get install -y nginx
-sudo service nginx status
+sudo apt-get update
+sudo apt-get install nginx
 sudo ufw 'nginx HTTP'
+
 echo "Hello World!" | sudo tee /var/www/html/index.html
+
 sudo nginx -t
 sudo service nginx reload

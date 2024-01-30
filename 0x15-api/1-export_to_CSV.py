@@ -11,7 +11,7 @@ if __name__ == '__main__':
     url = mainUrl + "/" + employeeId
 
     response = requests.get(url)
-    employeeName = response.json().get('name')
+    username = response.json().get('username')
 
     todoUrl = url + "/todos"
     response = requests.get(todoUrl)
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     with open('{}.csv'.format(employeeId), 'w') as file:
         for task in tasks:
             file.write('"{}","{}","{}","{}"\n'.format(
-                employeeId, employeeName, task.get(
+                employeeId, username, task.get(
                     'completed'), task.get('title')))

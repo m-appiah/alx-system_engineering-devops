@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Using REST API to export data in the CSV format of employees"""
 
-import csv
 import requests
 from sys import argv
 

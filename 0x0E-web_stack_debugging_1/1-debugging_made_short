@@ -2,6 +2,5 @@
 # same as task #0 but -f added to forcefully remove the file if it exists
 
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
+sudo service nginx restart
 rm /run/nginx.pid
-kill "$(pgrep 'nginx' | head -1)"

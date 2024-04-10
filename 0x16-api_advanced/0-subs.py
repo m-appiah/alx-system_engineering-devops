@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""shebang line"""
+"""unction that queries the Reddit API and returns the number of subscribers
+e"""
 
 import requests
 
